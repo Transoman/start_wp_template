@@ -31,7 +31,7 @@ if ( ! function_exists( 'myfirsttheme_setup' ) ) :
      */
     register_nav_menus( array(
       'primary'   => __( 'Primary Menu', 'myfirsttheme' ),
-      'secondary' => __('Secondary Menu', 'myfirsttheme' )
+      'secondary' => __( 'Secondary Menu', 'myfirsttheme' )
     ) );
 
     /**
@@ -39,6 +39,7 @@ if ( ! function_exists( 'myfirsttheme_setup' ) ) :
      * aside, gallery, quote, image, and video
      */
     add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+    add_theme_support( 'title-tag' )
   }
 endif; // myfirsttheme_setup
 add_action( 'after_setup_theme', 'myfirsttheme_setup' );
