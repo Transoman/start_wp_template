@@ -39,7 +39,7 @@ if ( ! function_exists( 'myfirsttheme_setup' ) ) :
      * aside, gallery, quote, image, and video
      */
     add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
-    add_theme_support( 'title-tag' )
+    add_theme_support( 'title-tag' );
   }
 endif; // myfirsttheme_setup
 add_action( 'after_setup_theme', 'myfirsttheme_setup' );
@@ -51,3 +51,5 @@ function add_theme_scripts() {
   wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array(), '', true);
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+require_once 'inc/remove.php';
